@@ -8,9 +8,24 @@
   "author": "Gerald Yeo <gerald.yeo@gmail.com>",
   "license": "MIT",
   "private": true,
+  "workspaces": [
+    "apps/*",
+    "libs/*",
+    "packages/*",
+    "unicorn/*"
+  ],
+  "scripts": {
+    "clean": "lerna run clean",
+    "build": "lerna run build",
+    "lint": "eslint --cache ."
+  },
   "devDependencies": {
     "@babel/cli": "^7.10.5",
     "@babel/core": "^7.10.5",
+    "@types/babel__core": "^7.1.9",
+    "@types/eslint": "^7.2.0",
+    "@types/prettier": "^2.0.2",
+    "@types/rimraf": "^3.0.0",
     "@typescript-eslint/eslint-plugin": "^3.7.0",
     "@typescript-eslint/parser": "^3.7.0",
     "babel-eslint": "^10.1.0",
@@ -25,6 +40,7 @@
     "eslint-plugin-react-hooks": "^4.0.8",
     "lerna": "^3.22.1",
     "prettier": "^2.0.5",
+    "rimraf": "^3.0.2",
     "typescript": "^3.9.7"
   }
 }

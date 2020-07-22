@@ -1,0 +1,15 @@
+{
+  "name": "@unicorn/bar",
+  "version": "1.0.0",
+  "description": "Unicorn - Bar",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "license": "MIT",
+  "scripts": {
+    "build": "yarn run clean && yarn run compile",
+    "clean": "rimraf -rf ./lib",
+    "compile": "tsc -p tsconfig.build.json",
+    "prepublishOnly": "yarn run build",
+    "test": "yarn run build"
+  }
+}

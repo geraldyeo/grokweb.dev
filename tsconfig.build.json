@@ -32,5 +32,13 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true
   },
-  "exclude": ["node_modules", "lib", "__tests__", "**/*.test*", "**/*.spec*"]
+  "exclude": [
+    "node_modules",
+    "jest",
+    "lib",
+    "__tests__",
+    "**/*.test*",
+    "**/*.spec*",
+    "**/*.stories*"
+  ]
 }

@@ -13,13 +13,17 @@
     "test": "jest"
   },
   "dependencies": {
+    "@emotion/core": "^10.0.28",
+    "@emotion/styled": "^10.0.27",
     "@react-aria/button": "^3.0.2",
-    "@unicorn/bar": "*",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "@unicorn/bar": "*"
   },
   "devDependencies": {
     "@types/react": "^16.9.43",
     "@types/react-dom": "^16.9.8"
+  },
+  "peerDependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   }
 }

@@ -1,0 +1,24 @@
+{
+  "name": "@grokweb/use-countdown",
+  "version": "1.0.0",
+  "description": "useCountdown hook",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "license": "MIT",
+  "scripts": {
+    "build": "yarn run clean && yarn run compile",
+    "clean": "rimraf -rf ./lib",
+    "compile": "tsc -p tsconfig.build.json",
+    "prepublishOnly": "yarn run build",
+    "test": "jest"
+  },
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "type-fest": "^0.16.0"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.44",
+    "@types/react-dom": "^16.9.8"
+  }
+}

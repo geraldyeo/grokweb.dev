@@ -1,14 +1,18 @@
 import React from 'react';
 import Button from './index';
 
-export default { title: 'Button' };
+export default { title: 'Button', component: Button };
 
-export const withText = () => <Button>Hello Button</Button>;
+const Template = (args) => <Button {...args} />;
 
-export const withEmoji = () => (
-  <Button>
+export const withText = Template.bind({});
+withText.args = { children: 'hello' };
+
+export const withEmoji = Template.bind({});
+withEmoji.args = {
+  children: (
     <span role="img" aria-label="so cool">
       😀 😎 👍 💯
     </span>
-  </Button>
-);
+  ),
+};

@@ -11,6 +11,7 @@ const StyledButton = styled.button`
 `;
 
 const Button = ({ children }: Props): JSX.Element => (
+  // eslint-disable-next-line no-console
   <StyledButton type="button" onClick={() => console.log(meaningOfLife)}>
     {children}
   </StyledButton>

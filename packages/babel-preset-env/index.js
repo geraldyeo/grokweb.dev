@@ -1,4 +1,3 @@
-/* eslint-disable */
 // @see {https://github.com/airbnb/babel-preset-airbnb/blob/master/index.js}
 const { declare } = require('@babel/helper-plugin-utils');
 
@@ -16,11 +15,41 @@ function buildTargets({ additionalTargets }) {
 }
 
 module.exports = declare((api, options) => {
+  // see docs about api at https://babeljs.io/docs/en/config-files#apicache
+  api.assertVersion('^7.0.0');
+
+  const { modules = 'auto', targets = buildTargets(options) } = options;
+
+  if (typeof modules !== 'boolean' && modules !== 'auto') {
+    throw new TypeError(
+      '@grokweb/babel-preset-env only accepts `true`, `false`, or `"auto"` as the value of the "modules" option'
+    );
+  }
+
+  const debug = typeof options.debug === 'boolean' ? options.debug : false;
+  const development =
+    typeof options.development === 'boolean'
+      ? options.development
+      : api.cache.using(() => process.env.NODE_ENV === 'development');
+
   return {
     presets: [
-      require('@babel/preset-env'),
-      require('@babel/preset-react'),
+      [
+        require('@babel/preset-env'),
+        {
+          debug,
+          exclude: [
+            'transform-async-to-generator',
+            'transform-template-literals',
+            'transform-regenerator',
+          ],
+          modules: modules === false ? false : 'auto',
+          targets,
+        },
+      ],
+      [require('@babel/preset-react'), { development }],
       require('@babel/preset-typescript'),
+      require('@emotion/babel-preset-css-prop'),
     ],
     plugins: [
       // Stage 1

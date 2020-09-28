@@ -15,11 +15,11 @@
   "dependencies": {
     "@emotion/core": "^10.0.35",
     "@emotion/styled": "^10.0.27",
-    "@react-aria/button": "^3.2.1",
+    "@react-aria/button": "^3.2.2",
     "@unicorn/bar": "*"
   },
   "devDependencies": {
-    "@types/react": "^16.9.49",
+    "@types/react": "^16.9.51",
     "@types/react-dom": "^16.9.8"
   },
   "peerDependencies": {

@@ -13,7 +13,7 @@
     "test": "jest"
   },
   "devDependencies": {
-    "@types/react": "^16.9.51",
+    "@types/react": "^16.9.53",
     "@types/react-dom": "^16.9.8"
   },
   "peerDependencies": {

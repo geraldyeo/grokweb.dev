@@ -1,9 +1,9 @@
 {
   "name": "root",
-  "description": "grokweb.dev monorepo",
+  "description": "aftersix.dev monorepo",
   "repository": {
     "type": "git",
-    "url": "git@github.com:geraldyeo/grokweb.dev.git"
+    "url": "git@github.com:geraldyeo/aftersix.dev.git"
   },
   "author": "Gerald Yeo <gerald.yeo@gmail.com>",
   "license": "MIT",

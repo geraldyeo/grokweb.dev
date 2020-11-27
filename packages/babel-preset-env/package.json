@@ -30,7 +30,7 @@
     "@babel/preset-typescript": "^7.12.1",
     "@emotion/babel-preset-css-prop": "^10.2.1",
     "babel-plugin-dev-expression": "^0.2.2",
-    "babel-plugin-macros": "^2.8.0"
+    "babel-plugin-macros": "^3.0.0"
   },
   "devDependencies": {
     "@types/babel-plugin-macros": "2.8.3",

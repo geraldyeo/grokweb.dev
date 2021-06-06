@@ -19,7 +19,7 @@
     "@unicorn/bar": "*"
   },
   "devDependencies": {
-    "@types/react": "16.9.56",
+    "@types/react": "17.0.9",
     "@types/react-dom": "16.9.9"
   },
   "peerDependencies": {
